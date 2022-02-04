@@ -18,6 +18,10 @@
             max-width: 1024px;
             margin: 0 auto;
         }
+
+        @media (min-width: 1024px) {
+            padding: 0 24px;
+        }
     }
 
     &__info,
@@ -46,7 +50,7 @@
 
         @media (min-width: 768px) {
             margin: 0 20px 0 0;
-            padding: 0 24px 0 0;
+            padding: 0;
         }
     }
 }
