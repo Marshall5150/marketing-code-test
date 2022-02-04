@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Product from "./components/Product";
 import ProductDescription from "./components/ProductDescription";
 import ProductSpecification from "./components/ProductSpecification";
+import Footer from "./components/Footer";
 
 const PRODUCTS_LIST = gql`
     {
@@ -37,9 +38,12 @@ const App = () => {
     return (
         <React.Fragment>
             <Navigation />
-            <Product product={data.product} />
-            <ProductDescription product={data.product} />
-            <ProductSpecification product={data.product} />
+            <main id="main">
+                <Product product={data.product} />
+                <ProductDescription product={data.product} />
+                <ProductSpecification product={data.product} />
+            </main>
+            <Footer />
         </React.Fragment>
     );
 };
