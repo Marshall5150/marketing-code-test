@@ -1,0 +1,24 @@
+.button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+
+    &--pink {
+        background: linear-gradient(
+            to bottom,
+            $light-pink 0%,
+            $light-pink 50%,
+            $hot-pink 50%,
+            $hot-pink 100%
+        );
+        color: $white;
+
+        &:hover {
+          background: $hot-pink;
+        }
+    }
+}

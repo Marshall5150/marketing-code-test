@@ -13,7 +13,7 @@ const Product = (props) => {
     };
 
     return (
-        <section className="product-block" id="main">
+        <section className="product-block">
             <div className="product-block__inner">
                 <img
                     className="product-block__image"
@@ -36,6 +36,7 @@ const Product = (props) => {
                                     data-testid="decrementBtn"
                                     onClick={handleMinusClick}
                                     className="quantity-block__btn"
+                                    aria-label={"Decrease quantity, current value is: " + count}
                                 >
                                     -
                                 </button>
@@ -49,6 +50,7 @@ const Product = (props) => {
                                     data-testid="incrementBtn"
                                     onClick={() => setCount(count + 1)}
                                     className="quantity-block__btn"
+                                    aria-label={"Increase quantity, current value is: " + count}
                                 >
                                     +
                                 </button>
@@ -59,6 +61,7 @@ const Product = (props) => {
                             data-testid="addToBasketBtn"
                             onClick={addToBasket}
                             className="button button--pink mt-2"
+                            aria-label={"Add these " + count + " item(s) to your basket"}
                         >
                             Add to cart
                         </button>

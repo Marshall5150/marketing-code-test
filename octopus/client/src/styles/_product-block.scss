@@ -1,0 +1,51 @@
+.product-block {
+    background: linear-gradient(
+        to bottom,
+        $deep-navy 0%,
+        $deep-navy 50%,
+        $lighter-navy 50%,
+        $lighter-navy 100%
+    );
+
+    @media (min-width: 768px) {
+        background: $deep-navy;
+        padding: 24px;
+    }
+
+    &__inner {
+        @media (min-width: 768px) {
+            display: flex;
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+    }
+
+    &__content,
+    &__cta-container {
+        padding: 24px;
+    }
+
+    &__content {
+      @media (min-width: 768px) {
+        padding: 0 0 24px 0;
+      }
+    }
+
+    &__cta-container {
+      @media (min-width:768px) {
+        padding: 0;
+      }
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 24px;
+
+        @media (min-width: 768px) {
+            margin: 0 20px 0 0;
+        }
+    }
+}

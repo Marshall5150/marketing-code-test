@@ -1,0 +1,11 @@
+.list-block {
+    list-style-type: none;
+    padding: 0;
+
+    &__item {
+        padding: 8px 0;
+        border-bottom: 1px solid $lighter-navy;
+        display: flex;
+        justify-content: space-between;
+    }
+}

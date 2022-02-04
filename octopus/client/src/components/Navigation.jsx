@@ -17,7 +17,7 @@ const Navigation = () => {
                             x="0"
                             y="0"
                             viewBox="0 0 470.6667 64"
-                            className="navigation__icon navigation__icon--home"
+                            className="navigation__icon navigation__home-icon"
                         >
                             <title>Octopus Energy</title>
                             <path

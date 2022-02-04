@@ -1,0 +1,45 @@
+@for $i from 0 through 10 {
+    @each $shorthand, $side in $directions {
+        .m#{$shorthand}-#{$i} {
+            margin-#{$side}: #{$i * $spacing-unit}px;
+        }
+
+        .m-#{$i} {
+            margin: #{$i * $spacing-unit}px;
+        }
+    }
+}
+
+.screen-reader-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.background-deep-navy {
+    background-color: $deep-navy;
+}
+
+.background-lighter-navy {
+    background-color: $lighter-navy;
+}
+
+.flex {
+    display: flex;
+
+    &-space-between {
+        justify-content: space-between;
+    }
+
+    &-align-center {
+        align-items: center;
+    }
+}
+
+.font-colour-blue-grey {
+    color: $blue-grey;
+}

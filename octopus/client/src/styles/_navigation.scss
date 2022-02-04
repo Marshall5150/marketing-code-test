@@ -1,0 +1,32 @@
+.navigation {
+    background-color: $deep-navy;
+    color: $white;
+    padding: 16px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        max-width: 976px;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        fill: currentColor;
+        height: 100%;
+        width: 24px;
+
+        @media (min-width: 768px) {
+            width: 40px;
+        }
+    }
+
+    &__home-icon {
+        width: 112px;
+
+        @media (min-width: 768px) {
+            width: 200px;
+        }
+    }
+}
