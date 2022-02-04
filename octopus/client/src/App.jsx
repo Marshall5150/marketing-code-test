@@ -4,7 +4,8 @@ import { useQuery, gql } from "@apollo/client";
 // components
 import Navigation from "./components/Navigation";
 import Product from "./components/Product";
-import ProductQuantity from "./components/ProductQuantity";
+import ProductDescription from "./components/ProductDescription";
+import ProductSpecification from "./components/ProductSpecification";
 
 const PRODUCTS_LIST = gql`
     {
@@ -29,26 +30,16 @@ const PRODUCTS_LIST = gql`
 
 const App = () => {
     const { loading, error, data } = useQuery(PRODUCTS_LIST);
-    let basket = [];
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error</p>;
 
-    console.log("test");
-    console.log(data.product);
-    // console.log(basket);
-
     return (
         <React.Fragment>
             <Navigation />
-            <Product product={data.product}/>
-            <ProductQuantity product={data.product}/>
-            <section className="background-lighter-navy">
-                <div className="container">
-                    <h2>Description</h2>
-                    <p>{data.product.description}</p>
-                </div>
-            </section>
+            <Product product={data.product} />
+            <ProductDescription product={data.product} />
+            <ProductSpecification product={data.product} />
         </React.Fragment>
     );
 };
