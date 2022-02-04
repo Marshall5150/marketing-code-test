@@ -1,6 +1,5 @@
 .navigation {
     background-color: $deep-navy;
-    color: $white;
     padding: 16px;
 
     &__items {
@@ -13,7 +12,7 @@
     }
 
     &__icon {
-        fill: currentColor;
+        fill: $white;
         height: 100%;
         width: 24px;
 

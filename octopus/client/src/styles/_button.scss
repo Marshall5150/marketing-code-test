@@ -6,6 +6,7 @@
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    color: $white;
 
     &--pink {
         background: linear-gradient(
@@ -15,10 +16,27 @@
             $hot-pink 50%,
             $hot-pink 100%
         );
-        color: $white;
 
         &:hover {
           background: $hot-pink;
+        }
+    }
+
+    &--icon-btn {
+        padding: 5px 11px;
+        width: 35px;
+        background-color: $blue-grey;
+
+        &:hover {
+          background: darken($blue-grey, 10%);
+        }
+
+        &:first-of-type {
+            background-color: $charcoal;
+
+            &:hover {
+              background-color: lighten($charcoal, 10%);
+            }
         }
     }
 }

@@ -20,12 +20,12 @@
         }
     }
 
-    &__content,
+    &__info,
     &__cta-container {
         padding: 24px;
     }
 
-    &__content {
+    &__info {
       @media (min-width: 768px) {
         padding: 0 0 24px 0;
       }

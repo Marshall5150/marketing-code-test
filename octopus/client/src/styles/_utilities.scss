@@ -1,3 +1,4 @@
+// Loop to create margin classes based on spacing unit value
 @for $i from 0 through 10 {
     @each $shorthand, $side in $directions {
         .m#{$shorthand}-#{$i} {
@@ -7,6 +8,17 @@
         .m-#{$i} {
             margin: #{$i * $spacing-unit}px;
         }
+    }
+}
+
+// Loop to create font colour and background colour classes
+@each $colour in $colours {
+    .background-#{nth($colour, 1)} {
+        background-color: nth($colour, 2);
+    }
+
+    .font-colour-#{nth($colour, 1)} {
+        color: nth($colour, 2);
     }
 }
 
@@ -20,14 +32,6 @@
     width: 1px;
 }
 
-.background-deep-navy {
-    background-color: $deep-navy;
-}
-
-.background-lighter-navy {
-    background-color: $lighter-navy;
-}
-
 .flex {
     display: flex;
 
@@ -38,8 +42,4 @@
     &-align-center {
         align-items: center;
     }
-}
-
-.font-colour-blue-grey {
-    color: $blue-grey;
 }
