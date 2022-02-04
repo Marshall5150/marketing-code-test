@@ -27,7 +27,8 @@ const Product = (props) => {
                     <div className="product-block__info">
                         <h1 className="mb-1">{props.product?.name}</h1>
                         <p className="font-colour-blue-grey">
-                            {props.product?.power} // Packet of {props.product?.quantity}
+                            {props.product?.power} // Packet of{" "}
+                            {props.product?.quantity}
                         </p>
                     </div>
 
@@ -39,21 +40,24 @@ const Product = (props) => {
                                     data-testid="decrementBtn"
                                     onClick={handleMinusClick}
                                     className="button button--icon-btn"
-                                    aria-label={"Decrease quantity, current value is: " + count}
+                                    aria-label={
+                                        "Decrease quantity, current value is: " +
+                                        count
+                                    }
                                 >
                                     -
                                 </button>
-                                <h3
-                                    data-testid="counter"
-                                    className="ml-1 mr-1"
-                                >
+                                <h3 data-testid="counter" className="ml-1 mr-1">
                                     {count}
                                 </h3>
                                 <button
                                     data-testid="incrementBtn"
                                     onClick={() => setCount(count + 1)}
                                     className="button button--icon-btn"
-                                    aria-label={"Increase quantity, current value is: " + count}
+                                    aria-label={
+                                        "Increase quantity, current value is: " +
+                                        count
+                                    }
                                 >
                                     +
                                 </button>
@@ -64,7 +68,9 @@ const Product = (props) => {
                             data-testid="addToBasketBtn"
                             onClick={addToBasket}
                             className="button button--pink mt-2"
-                            aria-label={"Add these " + count + " item(s) to your basket"}
+                            aria-label={
+                                "Add these " + count + " item(s) to your basket"
+                            }
                         >
                             Add to cart
                         </button>
@@ -74,9 +80,12 @@ const Product = (props) => {
                             to inform the user how many items had been added to their basket
                         */}
                         <div data-testid="basket">
-                            {cart.length !== 0 ? <p aria-live="assertive" role="alert">You have {cart.length} items in your basket</p> : null}
+                            {cart.length !== 0 ? (
+                                <p aria-live="assertive" role="alert">
+                                    You have {cart.length} items in your basket
+                                </p>
+                            ) : null}
                         </div>
-
                     </div>
                 </div>
             </div>

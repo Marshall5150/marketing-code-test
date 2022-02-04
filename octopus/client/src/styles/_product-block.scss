@@ -26,15 +26,15 @@
     }
 
     &__info {
-      @media (min-width: 768px) {
-        padding: 0 0 24px 0;
-      }
+        @media (min-width: 768px) {
+            padding: 0 0 24px 0;
+        }
     }
 
     &__cta-container {
-      @media (min-width:768px) {
-        padding: 0;
-      }
+        @media (min-width: 768px) {
+            padding: 0;
+        }
     }
 
     &__image {
